@@ -30,21 +30,19 @@ for (c = 0; c < cardPerson.length; c++) {
             <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg'></div>
             </div>`;
             fleshPerson.push(resultPerson);
-        }
+        } else {
 
-        for (k = 0; k < imgPerson.length; k++) {
-        
-            if (c === k) {
-                resultPerson = `<div class='card card--person'>
-                <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
-                <img class='person' src='images/${imgPerson[k]}.svg' alt='${imgPerson[k]}'>
-                <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
-                </div>`;            
-                fleshPerson.push(resultPerson);
-            } 
-        
-        
-        
+            for (k = 0; k < imgPerson.length; k++) {
+            
+                if (c === k) {
+                    resultPerson = `<div class='card card--person'>
+                    <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
+                    <img class='person' src='images/${imgPerson[k]}.svg' alt='${imgPerson[k]}'>
+                    <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
+                    </div>`;            
+                    fleshPerson.push(resultPerson);
+                } 
+            }        
         }
     }
 }
