@@ -6,34 +6,32 @@ imgPerson = ['jack', 'queen','king'];
 flesh = [];
 fleshPerson = [];
 
-
 for (i = 0; i < card.length; i++) {    
     
     for (j = 0; j < suitCard.length; j++) {        
         result = `<div class='card'>
-        <div class='card__info'>${card[i]}<img src='images/${suitCard[j]}.svg'></div>
-        <div class='card__info'>${card[i]}<img src='images/${suitCard[j]}.svg'></div>
+        <div class='card__info'>${card[i]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
+        <div class='card__info'>${card[i]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
         </div>`;
         flesh.push(result);
-    }
-    
+    }    
 }
 
 for (c = 0; c < cardPerson.length; c++) {
 
     for (j = 0; j < suitCard.length; j++) {
-
+        
         if (c === cardPerson.length -1 ) {
             resultPerson = `<div class='card card--person'>
-            <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg'></div>
+            <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
             <img class='person' src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'>
-            <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg'></div>
+            <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
             </div>`;
             fleshPerson.push(resultPerson);
         } else {
 
             for (k = 0; k < imgPerson.length; k++) {
-            
+                
                 if (c === k) {
                     resultPerson = `<div class='card card--person'>
                     <div class='card__info'>${cardPerson[c]}<img src='images/${suitCard[j]}.svg' alt='${suitCard[j]}'></div>
